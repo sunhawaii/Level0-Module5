@@ -1,6 +1,5 @@
 """
 Go to the recipe to run the demonstration before starting this program
-https://ddwap.mah.se/m11p2196/processing/intersecting.html
 """
 
 def setup():
