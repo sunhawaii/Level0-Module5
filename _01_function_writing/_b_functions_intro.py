@@ -15,6 +15,27 @@ import unittest
 #  statement. Create your functions below and not inside the test class.
 
 
+
+def multiply(num_1, num_2):
+
+    answer=num_1*num_2
+    return answer
+
+def str_cat(var1, var2, var3):
+
+    return str(var1) +' '+ str(var2) +' '+ str(var3)
+
+def greater_than(num1, num2):
+    if num1 < num2:
+        return True
+    else:
+        return False
+
+def get_random_number(low, high):
+    return random.randint(low, high)
+
+
+def is_vegetable():
 # ======================= DO NOT EDIT THE CODE BELOW =========================
 
 class FunctionTests(unittest.TestCase):
