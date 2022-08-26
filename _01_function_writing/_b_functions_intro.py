@@ -5,6 +5,8 @@ from tkinter import messagebox, simpledialog, Tk
 import random
 import unittest
 
+window = Tk()
+window.withdraw()
 # TODO Look at the test methods below and define the functions used in those
 #  tests to make the tests pass. For example, the first test function has the
 #  following code:
@@ -35,7 +37,19 @@ def get_random_number(low, high):
     return random.randint(low, high)
 
 
-def is_vegetable():
+def is_vegetable(fruit_or_vegetable):
+    fruit_or_vegetable=simpledialog.askstring(None, prompt= "What fruit/vegetable do you want to try?")
+    if fruit_or_vegetable == 'celery':
+
+        return True
+
+    elif fruit_or_vegetable == 'apple' or 'tomato' or 'mushroom':
+
+        return False
+    else:
+        messagebox.showerror(None, prompt= "Please try a different fruit of vegetable.")
+        return False
+
 # ======================= DO NOT EDIT THE CODE BELOW =========================
 
 class FunctionTests(unittest.TestCase):

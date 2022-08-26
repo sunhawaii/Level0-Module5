@@ -1,10 +1,90 @@
 """
 Have the turtle draw a row of houses.
 """
+import turtle
 from tkinter import messagebox, simpledialog, Tk
 
 
 if __name__ == '__main__':
+    window = Tk()
+    window.withdraw()
+    window = turtle.Screen()
+    window.bgcolor('white')
+    turt=turtle.Turtle()
+
+    turt.speed(1)
+    turt.penup()
+    turt.goto(-300,-300)
+    def draw_house(house_size):
+
+        if house_size == 'small':
+            x = 60
+            for i in range(4):
+                turt.pendown()
+                turt.fillcolor('red')
+                turt.begin_fill()
+                turt.forward(x)
+                turt.left(90)
+            turt.end_fill()
+            turt.fillcolor('green')
+            turt.begin_fill()
+            turt.forward(x)
+            turt.right(90)
+            turt.forward(x/3)
+            turt.right(90)
+            turt.forward(3*x)
+            turt.right(90)
+            turt.forward(x/3)
+            turt.right(90)
+            turt.forward(2*x)
+            turt.end_fill()
+
+        if house_size == 'medium':
+            x = 120
+            for i in range(4):
+                turt.pendown()
+                turt.fillcolor('red')
+                turt.begin_fill()
+                turt.forward(x)
+                turt.left(90)
+            turt.end_fill()
+            turt.fillcolor('green')
+            turt.begin_fill()
+            turt.forward(x)
+            turt.right(90)
+            turt.forward(x/3)
+            turt.right(90)
+            turt.forward(3*x)
+            turt.right(90)
+            turt.forward(x/3)
+            turt.right(90)
+            turt.forward(2*x)
+            turt.end_fill()
+
+        if house_size == 'large':
+            x = 120
+            for i in range(4):
+                turt.pendown()
+                turt.fillcolor('red')
+                turt.begin_fill()
+                turt.forward(x)
+                turt.left(90)
+            turt.end_fill()
+            turt.fillcolor('green')
+            turt.begin_fill()
+            turt.forward(x)
+            turt.right(90)
+            turt.forward(x / 3)
+            turt.right(90)
+            turt.forward(3 * x)
+            turt.right(90)
+            turt.forward(x / 3)
+            turt.right(90)
+            turt.forward(2 * x)
+            turt.end_fill()
+    for i in range(10):
+        draw_house('small')
+
     # TODO)
     #   1) Move the turtle to the left side of the window near the bottom.
     #   2) Draw ONE flat-topped house with height=100 and green grass after it.
