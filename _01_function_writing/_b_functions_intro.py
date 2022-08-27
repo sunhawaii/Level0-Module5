@@ -37,18 +37,36 @@ def get_random_number(low, high):
     return random.randint(low, high)
 
 
-def is_vegetable(fruit_or_vegetable):
-    fruit_or_vegetable=simpledialog.askstring(None, prompt= "What fruit/vegetable do you want to try?")
+def is_vegetable(fruit_or_vegetable=''):
+
     if fruit_or_vegetable == 'celery':
 
         return True
 
-    elif fruit_or_vegetable == 'apple' or 'tomato' or 'mushroom':
+    elif fruit_or_vegetable == 'apple':
+                return False
+    elif fruit_or_vegetable == 'tomato':
+                return False
+    elif fruit_or_vegetable == 'mushroom':
+        return False
 
+    elif fruit_or_vegetable == '':
         return False
-    else:
-        messagebox.showerror(None, prompt= "Please try a different fruit of vegetable.")
-        return False
+
+def make_appointment(preferred_time_of_day = ''):
+    if preferred_time_of_day == 'morning':
+        return '8 am'
+    elif preferred_time_of_day ==  'afternoon':
+        return '1 pm'
+
+    elif preferred_time_of_day ==  'evening':
+        return '5 pm'
+
+    elif preferred_time_of_day ==  '':
+        return '8 am'
+
+    elif preferred_time_of_day ==  'graveyard':
+        return 'error'
 
 # ======================= DO NOT EDIT THE CODE BELOW =========================
 

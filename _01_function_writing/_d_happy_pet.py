@@ -54,8 +54,31 @@ if __name__ == '__main__':
                 happiness_level= happiness_level+10
             if pet == 'bird':
                 happiness_level= happiness_level+15
+
+
+        if activity_choice == 'eat_your_pet':
+            if pet == 'dog':
+                happiness_level= happiness_level-3000
+                messagebox.showerror("your dog has died")
+                exit()
+            if pet == 'cat':
+                happiness_level= happiness_level-30000
+                messagebox.showerror("your cat has died")
+                exit()
+            if pet == 'fish':
+                happiness_level= happiness_level-3000
+                messagebox.showerror("your fish has died")
+                exit()
+            if pet == 'hamster':
+                happiness_level= happiness_level-3000
+                messagebox.showerror("your fish has died")
+                exit()
+            if pet == 'bird':
+                happiness_level= happiness_level-3000
+                messagebox.showerror("your fish has died")
+                exit()
     if happiness_level >= 100:
-        messagebox.showinfo(title=None, prompt="you made your pet happy!")
+        messagebox.showinfo(title='Congrats',prompt="you made your pet happy!")
     #      Examples of activities are: Feed, Walk, Play
     #   3. Write a method for each of the pet activities offered.
     #      Each activity should increase (or decrease) the pet's happiness
